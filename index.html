@@ -4,18 +4,49 @@
   <meta charset="UTF-8">
   <title>HTML Video</title>
   <style>
-    body {
-      text-align: center;
-      font-family: sans-serif;
-      background-color: #f0f0f0;
-      padding: 30px;
-    }
+  
     video {
       width: 90%;
       max-width: 600px;
       border: 2px solid #333;
       border-radius: 10px;
     }
+    
+    :root {
+
+--bg-color: white;
+
+--text-color: rgb(41, 41, 41);
+
+}
+
+body {
+
+background-color: var(--bg-color);
+color: var(--text-color);
+      text-align: center;
+      font-family: sans-serif;
+      padding: 30px;
+}
+
+@media(prefers-color-scheme: dark) {
+
+:root {
+
+--bg-color: rgb(41, 41, 41);
+
+--text-color: white;
+
+}
+
+p {
+
+color: white;
+
+
+}
+}
+    
   </style>
 </head>
 <body>
