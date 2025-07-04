@@ -30,8 +30,7 @@
     #yes{ background:#4caf50; color:#fff; }
     #no { background:#f44336; color:#fff; }
 
-    /* full-screen ဖြစ်သွားတဲ့အချိန် style */
-    .fullscreen{
+   .fullscreen{
         position:fixed;
         top:0;
         left:0;
@@ -51,12 +50,12 @@
 <body>
     <h1 id="question">You Love Me🥹?</h1>
 
-    <div id="buttons">
+ <div id="buttons">
         <button id="yes">Yes</button>
         <button id="no">No</button>
     </div>
 
-    <div id="thanks">Yaaa You Love Me 🥰😘</div>
+ <div id="thanks">Yaaa You Love Me 🥰😘</div>
 
 <script>
 const yesBtn   = document.getElementById('yes');
@@ -65,12 +64,12 @@ const question = document.getElementById('question');
 const growFactor = 1.3;   // ကြီးမည့်အချိုး
 
 noBtn.addEventListener('click', () => {
-    // Yes button ကို မကြာခဏ ကြီးလောင်စေခြင်း
+   // Yes button ကို မကြာခဏ ကြီးလောင်စေခြင်း
     const rect = yesBtn.getBoundingClientRect();
     let newW = rect.width  * growFactor;
     let newH = rect.height * growFactor;
 
-    //  viewport 80 % ထက်ကြီးသွားရင် full-screen class ထည့်
+   //  viewport 80 % ထက်ကြီးသွားရင် full-screen class ထည့်
     if (newW >= window.innerWidth * 0.8 || newH >= window.innerHeight * 0.8){
         yesBtn.classList.add('fullscreen');
         yesBtn.textContent = 'YES';
@@ -82,7 +81,7 @@ noBtn.addEventListener('click', () => {
 });
 
 yesBtn.addEventListener('click', () => {
-    // Yes ကို‌နှိပ်လျှင် စာများပျောက်ပြီး Thank you ပြ
+  // Yes ကို‌နှိပ်လျှင် စာများပျောက်ပြီး Thank you ပြ
     document.getElementById('buttons').style.display = 'none';
     question.style.display = 'none';
     document.getElementById('thanks').style.display = 'block';
